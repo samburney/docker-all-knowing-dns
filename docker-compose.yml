@@ -1,0 +1,11 @@
+version: '2.4'
+
+services:
+  akd:
+    image: 'samburney/all-knowing-dns:dev'
+    build: .
+#    volumes:
+#      - './all-knowing-dns.conf:/etc/all-knowing-dns.conf'
+#    ports:
+#      - '53:53/tcp'
+#      - '53:53/udp'

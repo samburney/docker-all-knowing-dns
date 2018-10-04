@@ -1,0 +1,23 @@
+#!/usr/bin/with-contenv bash
+
+# If config file exists, start daemon
+if [ -f /etc/all-knowing-dns.conf ] ; then
+    echo "Starting AllKnowingDNS"
+
+    exec \
+        /usr/bin/all-knowing-dns
+else
+    echo -e "\n\
+******************************************** \n\
+Error: Configuration file not found \n\
+\n\
+Please create /etc/all-knowing-dns.conf \n\
+\n\
+See https://metacpan.org/pod/all-knowing-dns \n\
+******************************************** \n\
+\n"
+
+    sleep 600
+fi
+
+exit 1

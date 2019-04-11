@@ -5,7 +5,7 @@ if [ -f /etc/all-knowing-dns.conf ] ; then
     echo "Starting AllKnowingDNS"
 
     exec \
-        /usr/bin/all-knowing-dns
+        /usr/local/share/all-knowing-dns/script/all-knowing-dns
 else
     echo -e "\n\
 ******************************************** \n\
